@@ -1,7 +1,9 @@
 # Cisco Packet Tracer Project
 
-Place the original `.pkt` simulation file in this folder.
+The original Cisco Packet Tracer simulation is stored in this folder:
 
-Once uploaded, open it using Cisco Packet Tracer to inspect the network topology, device configurations, branch connectivity and implemented services.
+- `FINAL_PRESENTATION.pkt` — native Packet Tracer project file.
 
-**Current status:** The Packet Tracer file has not yet been added. It will be uploaded manually by the project owner. Until it is reviewed, implementation details and test results remain subject to verification.
+Open the file with Cisco Packet Tracer to view the network simulation. The accompanying Markdown documentation is based on the university assignment report and describes the intended design, addressing and configuration approach.
+
+The presence of the simulation file in this repository does not by itself establish that every device, service or inter-branch test has been independently verified.
