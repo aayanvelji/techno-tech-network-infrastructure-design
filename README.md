@@ -1,67 +1,55 @@
-# Techno Tech – Proposed Network Design
+# Techno Tech – Enterprise Network Infrastructure Design
 
-A university group project focused on designing and documenting a multi-branch enterprise network for the fictional organisation **Techno Tech**.
+A university group project designing a multi-branch enterprise network for Techno Tech using Cisco Packet Tracer.
 
 ## Project overview
 
-The assignment models a company with branch networks in **Malaysia, Singapore, Australia, and Japan**. Malaysia is identified as the headquarters. The project covers branch LAN design, IP addressing, WAN connectivity, network-device configuration, and network services.
+The proposed network connects four branch offices:
+- **Malaysia** — headquarters
+- **Singapore** — business centre
+- **Australia** — branch office with local web, FTP and IoT services
+- **Japan** — branch office with DNS and the centralised company email service
 
-The intended implementation artefact is a Cisco Packet Tracer simulation. The accompanying university report describes the design, addressing plans, configurations, and project work allocation.
+The assignment covers branch LAN design, IP addressing, a full-mesh WAN, router and switch configuration, wireless access, end devices and network services.
 
-## Project scope
+## Network architecture
 
-- Branch LAN topology and floor-plan design
-- IP addressing and subnet planning
-- WAN connectivity between branches, described in the report as a mesh design
-- Router and switch configuration
-- Network services including DNS, web, FTP, email and IoT
-- Wireless access and end-device connectivity
-- Configuration and connectivity verification
+- **LAN:** Extended-star topology at each branch.
+- **WAN:** Full-mesh topology connecting all four branches through six point-to-point serial links.
+- **Routing:** RIP is identified as the routing protocol in Chapter 3 of the assignment.
+- **Addressing:** Branch-specific private address ranges are used: Malaysia 10.10.x.x, Singapore 10.20.x.x, Australia 10.30.x.x and Japan 10.40.x.x. WAN links use 10.255.0.x.
+- **Services:** DNS, HTTP, FTP, centralised email, IoT monitoring and wireless access.
 
-**Verification note:** These are areas covered by the assignment. The exact implemented topology, configurations, routing behaviour and successful test results still need to be checked against the original Packet Tracer file. Do not treat every item above as independently verified.
+See the [branch designs](documentation/branch-designs.md), [WAN architecture](documentation/wan-architecture.md), [IP addressing](documentation/ip-addressing.md), [network configuration](documentation/network-configuration.md) and [network services](documentation/network-services.md).
 
-## Team project
+## Team project and responsibilities
 
-This work was completed as a university group assignment by:
+This is a collaborative university assignment completed by:
+- Aayan Velji — Japan branch; local DNS and centralised email server for all branches; email-server configuration and account creation.
+- Mohammed Mujtaba Ahmed — Singapore branch; local DNS, web and IoT; WAN and configuration documentation.
+- Mohammed Bilal Namoji — Malaysia branch; local DNS and web; configuration documentation.
+- Keyaan Minhas — Australia branch; local DNS, FTP, web and IoT; WAN connection in Packet Tracer; configuration documentation.
 
-- Aayan Velji
-- Mohammed Mujtaba Ahmed
-- Mohammed Bilal Namoji
-- Keyaan Minhas
+The [individual contribution record](documentation/my-contribution.md) distinguishes Aayan's assigned work from the overall group project.
 
-The assignment's work breakdown assigns Aayan the Japan branch design, centralized email-server configuration and account creation, and related configuration documentation. The other contributors were assigned their respective branch and project responsibilities.
+## Repository structure
 
-See [Individual Contribution](documentation/my-contribution.md) for the details of Aayan's recorded responsibilities.
-
-## Tools
-
-- Cisco Packet Tracer
-- Cisco IOS-style router and switch configuration
-- Microsoft Word for the assignment report
-
-## Repository contents
-
-| Folder / file | Contents |
+| Path | Contents |
 |---|---|
-| `documentation/` | Project overview, network design and individual contribution |
-| `packet-tracer/` | Original Cisco Packet Tracer simulation file (to be uploaded) |
-| `reports/` | Original university assignment report (if approved for sharing) |
-| `presentation/` | Project presentation material (if approved for sharing) |
+| `documentation/` | Project overview, branch designs, WAN, addressing, configurations, services and contribution |
+| `packet-tracer/FINAL_PRESENTATION.pkt` | Original Cisco Packet Tracer project file |
+| `reports/` | Information about the source university report |
+| `presentation/` | Information about presentation material |
 
-This repository is intentionally being kept **image-free** for now. No screenshots or exported diagrams are required.
+The repository is intentionally **image-free**. No screenshots or exported diagrams are included.
 
-## Opening the project
+## Opening the simulation
 
-After the original `.pkt` file has been uploaded to `packet-tracer/`, open it with Cisco Packet Tracer to inspect the topology, device configurations, branch connectivity and services. The implementation should be reviewed before making detailed claims about what was successfully configured or tested.
+Open `packet-tracer/FINAL_PRESENTATION.pkt` with Cisco Packet Tracer. The written documentation in this repository is based on the submitted assignment report. The Packet Tracer file is included as the simulation artefact; the text documentation should not be interpreted as a fresh independent test of every device or service.
 
-## Academic and portfolio note
+## Source and security notes
 
-This is a **group project**, not an individual project. The repository distinguishes the overall team work from Aayan's assigned contribution. Obtain any required permission from the other contributors and follow university rules before making the repository public.
-
-## Current status
-
-- [x] Initial repository structure created
-- [x] Project overview and network-design documentation drafted from the assignment
-- [x] Individual contribution documented from the assignment's work breakdown
-- [ ] Original Packet Tracer `.pkt` file to be uploaded manually
-- [ ] Implementation, configurations and testing to be checked against the Packet Tracer file
+- The university assignment report is the source for the design descriptions, address tables, device roles and recorded task allocation.
+- Passwords, account credentials, wireless keys and student identification numbers are deliberately excluded from this repository.
+- Addressing values are reproduced from the report. Where the source contains a value that appears inconsistent within its own tables, it is identified as recorded rather than silently corrected.
+- Obtain any required group permission and follow university rules before making the repository public.
