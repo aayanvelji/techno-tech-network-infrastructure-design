@@ -1,5 +1,5 @@
 # Project Reports
 
-This folder is reserved for the original university assignment report and any approved supporting reports.
+This folder is reserved for the original university assignment report and supporting reports that the group is permitted to share.
 
-The report is retained as a source artefact. The repository's technical documentation will provide a more concise, portfolio-friendly explanation of the design and implementation.
+The source report is used to prepare the concise technical documentation in `documentation/`. Before uploading the original Word report, review it for student IDs, passwords, account credentials, wireless passphrases and other information that should not be made public.
