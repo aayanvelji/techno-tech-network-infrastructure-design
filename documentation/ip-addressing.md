@@ -1,16 +1,59 @@
 # IP Addressing Plan
 
-This document consolidates the branch, device and WAN addressing information recorded in the submitted assignment. Values are reproduced as written; the Packet Tracer file has not been independently inspected to validate every entry.
+This document consolidates the branch, device and WAN addressing information recorded in the submitted assignment, with the gateway details clarified by the group's Packet Tracer verification.
 
-> **Verification warning:** The report contains conflicting gateway and endpoint values. The summary below identifies the conflicts that should be checked in Packet Tracer before these addresses are treated as the final working configuration.
+## Verified department default gateways
 
-| Branch / item | Values recorded in the report | Verification needed |
-|---|---|---|
-| Malaysia department gateways | Chapter 3.1 lists values including 10.10.1.110, 10.10.1.160, 10.10.1.60 and 10.10.1.10; device tables use 10.10.1.1. | Confirm the actual gateway configured for each department. |
-| Japan HR gateway | Chapter 3.1 gives 10.40.3.1; the Japan router interface table gives 10.40.2.1. | Confirm the HR router interface and endpoint gateways. |
-| Japan Administration switch gateway | Endpoint table prints 10.20.1.1; Japan router interface table gives 10.40.1.1. | Confirm the switch management default gateway. |
-| Japan HR endpoint | One HR endpoint is printed as 10.40.3.4 in the HR table. | Confirm the intended endpoint address and subnet. |
+The following gateway values were checked against the group's Packet Tracer project during documentation review.
 
+### Malaysia
+
+All Malaysia departments use the shared default gateway **10.10.1.1**.
+
+| Department | Default gateway |
+|---|---|
+| HR | 10.10.1.1 |
+| Finance | 10.10.1.1 |
+| IT | 10.10.1.1 |
+| Administration | 10.10.1.1 |
+| Server | 10.10.1.1 |
+
+The assignment's Chapter 3.1 lists different values for some Malaysia department gateways. The Packet Tracer value above is used here.
+
+### Singapore
+
+The following values are recorded in the assignment's addressing summary; they were not separately checked during this documentation review.
+
+| Department | Default gateway |
+|---|---|
+| Finance | 10.20.1.1 |
+| IT | 10.20.2.1 |
+| Administration | 10.20.3.1 |
+| Server | 10.20.4.1 |
+
+### Australia
+
+The following values are recorded in the assignment's addressing summary; they were not separately checked during this documentation review.
+
+| Department | Default gateway |
+|---|---|
+| Finance | 10.30.1.1 |
+| IT | 10.30.2.1 |
+| Administration | 10.30.3.1 |
+| Server / IoT | 10.30.4.1 |
+
+### Japan
+
+The following department gateways were confirmed in Packet Tracer.
+
+| Department | Default gateway |
+|---|---|
+| Administration | 10.40.1.1 |
+| HR | 10.40.2.1 |
+| Finance | 10.40.3.1 |
+| IT | 10.40.4.1 |
+
+The Japan Administration switch management gateway is 10.40.1.1. The assignment endpoint table's printed value of 10.20.1.1 is inconsistent with the verified Packet Tracer value.
 
 ## Branch address spaces
 
@@ -21,27 +64,24 @@ This document consolidates the branch, device and WAN addressing information rec
 | Australia | 10.30.x.x | 255.255.255.240 (/28) |
 | Japan | 10.40.x.x | 255.255.255.0 (/24) |
 
-## Router gateway and server reference
+## Server reference
 
-| Branch | Department / purpose | Gateway or server address |
+| Branch | Service / purpose | Address |
 |---|---|---|
-| Malaysia | Department LANs (device tables) | 10.10.1.1 |
 | Malaysia | HQ / DNS server | 10.10.1.100 |
 | Malaysia | Web server | 10.10.1.101 |
 | Malaysia | Mail server | 10.10.1.102 |
-| Singapore | Finance | 10.20.1.1 |
-| Singapore | IT | 10.20.2.1 |
-| Singapore | Administration | 10.20.3.1 |
-| Singapore | Server room | 10.20.4.1 |
-| Singapore | IoT / Web / DNS | 10.20.4.5 / 10.20.4.6 / 10.20.4.7 |
-| Australia | Finance / IT / Administration / Server-IoT | 10.30.1.1 / 10.30.2.1 / 10.30.3.1 / 10.30.4.1 |
-| Australia | Web-DNS / FTP / IoT gateway | 10.30.4.3 / 10.30.4.4 / 10.30.4.5 |
-| Japan | Administration / HR / Finance / IT (branch interface table) | 10.40.1.1 / 10.40.2.1 / 10.40.3.1 / 10.40.4.1 |
-| Japan | DNS / central email | 10.40.4.15 / 10.40.4.8 |
+| Singapore | IoT server | 10.20.4.5 |
+| Singapore | Web server | 10.20.4.6 |
+| Singapore | DNS server | 10.20.4.7 |
+| Australia | Web-DNS server | 10.30.4.3 |
+| Australia | FTP server | 10.30.4.4 |
+| Japan | DNS server | 10.40.4.15 |
+| Japan | Central email server | 10.40.4.8 |
 
 ## Malaysia device addressing
 
-All entries below use subnet mask 255.255.255.0 and default gateway 10.10.1.1, as shown in the report's device tables.
+All entries below use subnet mask 255.255.255.0 and default gateway 10.10.1.1, as shown in the report's device tables and confirmed for all Malaysia departments in Packet Tracer.
 
 | Device | Interface | IP address |
 |---|---|---|
@@ -171,11 +211,11 @@ All entries use subnet mask 255.255.255.240. Each department gateway is the corr
 | Server AC | Fa0/5 | 10.30.4.13 | 10.30.4.1 |
 | IoT Monitor PC (Mgmt) | Fa0/6 | 10.30.4.14 | 10.30.4.1 |
 
-The source report's Australia device list for the IT department is duplicated in two tables; the entries above are listed once. The report's Finance/IT/Administration/Server-IoT router interface table lists all four /28 networks.
+The source report's Australia device list for the IT department is duplicated in two tables; the entries above are listed once.
 
 ## Japan device addressing
 
-The source tables show the following endpoint addressing. Subnet mask is 255.255.255.0 for all entries. DNS is 10.40.4.15 where shown.
+The source tables show the following endpoint addressing. Subnet mask is 255.255.255.0 for all entries. DNS is 10.40.4.15 where shown. Department gateways below reflect the values confirmed in Packet Tracer.
 
 | Device / department | IP address | Default gateway | DNS |
 |---|---|---|---|
@@ -200,7 +240,7 @@ The source tables show the following endpoint addressing. Subnet mask is 255.255
 | Wireless Laptop 4 – IT | 10.40.4.7 | 10.40.4.1 | 10.40.4.15 |
 | Tablet – IT | 10.40.4.9 | 10.40.4.1 | 10.40.4.15 |
 | WebCam IoT – IT | 10.40.4.10 | 10.40.4.1 | 10.40.4.15 |
-| Switch – Administration | 10.40.1.2 | 10.20.1.1 (as printed) | — |
+| Switch – Administration | 10.40.1.2 | 10.40.1.1 | — |
 | Wired Laptop 1 – Administration | 10.40.1.3 | 10.40.1.1 | 10.40.4.15 |
 | Wired PC 1 – Administration | 10.40.1.4 | 10.40.1.1 | 10.40.4.15 |
 | Wired PC 2 – Administration | 10.40.1.6 | 10.40.1.1 | 10.40.4.15 |
@@ -214,13 +254,13 @@ The source tables show the following endpoint addressing. Subnet mask is 255.255
 | Wired Laptop 1 – HR | 10.40.2.5 | 10.40.2.1 | 10.40.4.15 |
 | Wired Laptop 2 – HR | 10.40.2.6 | 10.40.2.1 | 10.40.4.15 |
 | Wired PC 1 – HR | 10.40.2.3 | 10.40.2.1 | 10.40.4.15 |
-| Wired PC 2 – HR | 10.40.3.4 (as printed) | 10.40.2.1 | 10.40.4.15 |
+| Wired PC 2 – HR | 10.40.3.4 (confirmed present in Packet Tracer) | 10.40.2.1 | 10.40.4.15 |
 | Wireless Laptop 1 – HR | 10.40.2.9 | 10.40.2.1 | 10.40.4.15 |
 | Wireless Laptop 2 – HR | 10.40.2.8 | 10.40.2.1 | 10.40.4.15 |
 | Wireless PC 1 – HR | 10.40.2.10 | 10.40.2.1 | 10.40.4.15 |
 | WebCam IoT – HR | 10.40.2.7 | 10.40.2.1 | 10.40.4.15 |
 
-The Japan source tables also include access points with an IP value shown as N/A. The Japan HR table prints one endpoint as 10.40.3.4, although the row is in the HR section; this is retained as printed pending verification. The Administration switch default gateway is printed as 10.20.1.1, which differs from the Japan router interface table.
+The Japan HR endpoint at 10.40.3.4 was confirmed to exist in the Packet Tracer project. Its address is retained as configured/reported; it is not silently renumbered.
 
 ## WAN point-to-point addressing
 
@@ -237,24 +277,15 @@ All six WAN links use subnet mask 255.255.255.252 (/30).
 
 The report specifies DCE clock rate 128000 for each WAN serial link.
 
-## Source inconsistencies requiring verification
+## Routing protocol
 
-Do not silently correct these values. Compare them with the Packet Tracer file before treating them as final:
-
-- **Malaysia gateways:** Chapter 3.1 lists department gateway values such as 10.10.1.110, 10.10.1.160, 10.10.1.60 and 10.10.1.10, while the Malaysia device tables use 10.10.1.1 as the gateway.
-- **Japan HR gateway:** the Japan router interface table gives 10.40.2.1, while Chapter 3.1 gives 10.40.3.1.
-- **Japan Administration switch gateway:** the switch row in the endpoint table prints 10.20.1.1, while the Japan router interface table gives 10.40.1.1.
-- **Japan HR endpoint:** one HR endpoint is printed as 10.40.3.4 in the HR device table.
-- **Japan department subnet assignment:** the Japan router interface table maps Administration 10.40.1.0/24, HR 10.40.2.0/24, Finance 10.40.3.0/24 and IT 10.40.4.0/24.
-
-## Routing note
-
-The report's Chapter 3.5.2 names RIP, while the Australia conclusion specifies RIP v2 and another conclusion mentions static routing. No routing protocol is selected here as the verified final configuration. See [Network Configuration](network-configuration.md).
+The group confirmed that the Packet Tracer network uses **RIP Version 2 (RIPv2)**. This resolves the report's differing references to RIP and RIP v2; the mention of static routing in one conclusion is not the routing method used in the Packet Tracer project.
 
 ## Security note
 
 The source report includes account names and passwords. Credentials, passwords, wireless keys and student IDs are deliberately excluded from this repository.
 
-## Source
+## Sources and verification basis
 
-Based on the submitted assignment report's branch router/interface tables, endpoint IP tables, WAN addressing tables and Chapter 3 summaries.
+- Submitted assignment report: branch router/interface tables, endpoint IP tables, WAN addressing tables and Chapter 3 summaries.
+- Group confirmation during documentation review: Malaysia and Japan department gateways, Japan HR endpoint presence, RIPv2 routing and successful collective testing.
