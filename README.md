@@ -14,7 +14,7 @@ The proposed network connects four branch offices: **Malaysia (headquarters), Si
 - **Addressing:** Malaysia 10.10.x.x, Singapore 10.20.x.x, Australia 10.30.x.x, Japan 10.40.x.x; WAN links use 10.255.0.x.
 - **Services:** DNS, HTTP, FTP, centralised email, IoT monitoring and wireless access.
 
-See [branch designs](documentation/branch-designs.md), [WAN architecture](documentation/wan-architecture.md), [IP addressing](documentation/ip-addressing.md), [network configuration](documentation/network-configuration.md) [network services](documentation/network-services.md) and [testing and verification](documentation/testing-and-verification.md).
+See [branch designs](documentation/branch-designs.md), [WAN architecture](documentation/wan-architecture.md), [IP addressing](documentation/ip-addressing.md), [network configuration](documentation/network-configuration.md), [network services](documentation/network-services.md) and [testing and verification](documentation/testing-and-verification.md).
 
 ## Team project and responsibilities
 
