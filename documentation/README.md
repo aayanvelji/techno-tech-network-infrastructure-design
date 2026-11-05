@@ -1,13 +1,20 @@
 # Documentation
 
-This folder contains the written technical documentation for the Techno Tech network-design project.
+Technical documentation for the Techno Tech multi-branch network project.
 
-Planned documents:
+## Documents
 
-- `project-overview.md` — goals, scope, assumptions and team responsibilities
-- `network-design.md` — branch LANs, WAN topology and addressing approach
-- `network-implementation.md` — implementation details based on the Packet Tracer file
-- `network-configuration.md` — relevant router, switch and service configurations
-- `testing-and-verification.md` — connectivity checks and observed results
+- [Project Overview](project-overview.md) — background, scope, architecture and team responsibilities.
+- [Branch Designs](branch-designs.md) — Malaysia, Singapore, Australia and Japan LAN designs.
+- [WAN Architecture](wan-architecture.md) — full-mesh topology and six serial point-to-point links.
+- [IP Addressing](ip-addressing.md) — branch subnet plans, gateways, server addresses and WAN addressing.
+- [Network Configuration](network-configuration.md) — router, switch, WAN and verification command examples.
+- [Network Services](network-services.md) — DNS, HTTP, FTP, centralised email, IoT, wireless and end devices.
+- [Individual Contribution](my-contribution.md) — Aayan Velji's assigned responsibilities.
+- [Network Design](network-design.md) — concise summary of the LAN/WAN design.
 
-Documentation will be based on the submitted assignment and the actual Packet Tracer implementation.
+## Source and accuracy
+
+The submitted university assignment report is the source for design descriptions, address tables, configuration examples and team task allocation. Internal inconsistencies are identified rather than silently corrected. These documents do not claim fresh Packet Tracer testing.
+
+Passwords, email/FTP/IoT credentials, wireless passphrases and student IDs are not published.
