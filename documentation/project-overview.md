@@ -13,9 +13,9 @@ Techno Tech is a proposed multinational organisation with branches in Malaysia (
 
 The WAN uses 10.255.0.x.
 
-## Routing information requiring verification
+## Routing
 
-The assignment does not consistently identify one final routing method. Chapter 3.5.2 identifies RIP, the Australia branch conclusion refers to RIP version 2, and another branch conclusion mentions static routing. The report does not provide a complete, consistent set of routing commands for all four routers. Therefore, this overview does not claim that a particular routing protocol was selected or independently verified. See [Network Configuration](network-configuration.md) and [Testing and Verification](testing-and-verification.md).
+The group confirmed that the Packet Tracer network uses **RIP Version 2 (RIPv2)** across the four-branch network. This clarifies the inconsistent routing references in different sections of the assignment report. See [Network Configuration](network-configuration.md).
 
 ## Team responsibilities
 
@@ -24,8 +24,12 @@ The assignment does not consistently identify one final routing method. Chapter 
 - Keyaan Minhas: Australia branch, local DNS, FTP, web and IoT, WAN connection in Packet Tracer, configuration documentation.
 - Aayan Velji: Japan branch, local DNS, centralised email server for all branches, email configuration and account creation, configuration documentation and individual conclusion.
 
-The original Cisco Packet Tracer file is stored at `packet-tracer/FINAL_PRESENTATION.pkt`. This documentation is based on the assignment report, not an independent verification of every simulation setting or test result.
+## Group testing
+
+The group reports that network connectivity and the configured services were tested collectively in Packet Tracer and worked successfully. The testing document records this as a group-reported outcome; detailed command output or individual test logs were not added to the repository.
+
+The original Cisco Packet Tracer file is stored at `packet-tracer/FINAL_PRESENTATION.pkt`.
 
 ## Source
 
-Submitted Networking Assignment, branch design chapters, WAN chapter, configuration chapter and task allocation table.
+Submitted Networking Assignment, branch design chapters, WAN chapter, configuration chapter and task allocation table; group confirmations during documentation review.
