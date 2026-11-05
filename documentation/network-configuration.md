@@ -1,9 +1,8 @@
 # Network Configuration
 
-This document summarises configuration examples and the routing information stated in the assignment. Passwords and other secrets from the source report are intentionally omitted.
+This document summarises configuration examples and the routing method used in the Packet Tracer project. Passwords and other secrets from the source report are intentionally omitted.
 
-**Configuration coverage:** The submitted report provides detailed command examples for the Australia router and Australia IT switch. It does not provide equivalent complete command sets for all routers and switches across the four branches. The examples below are therefore limited to the configurations explicitly documented in the report; commands for other branches have not been invented. The original Packet Tracer file has not been independently inspected to extract additional configurations.
-
+**Configuration coverage:** The submitted report provides detailed command examples for the Australia router and Australia IT switch. It does not provide equivalent complete command sets for all routers and switches across the four branches. The examples below are therefore limited to the configurations explicitly documented in the report; commands for other branches have not been invented.
 
 ## Router configuration example — Australia
 
@@ -84,21 +83,17 @@ The assignment documents six serial point-to-point links:
 | Australia–Singapore | Australia Serial4/0 — 10.255.0.17 | Singapore Serial8/0 — 10.255.0.18 | 10.255.0.16/30 |
 | Malaysia–Japan | Malaysia Serial8/0 — 10.255.0.21 | Japan Serial8/0 — 10.255.0.22 | 10.255.0.20/30 |
 
-The report specifies subnet mask 255.255.255.252 (/30) and DCE clock rate 128000 for each serial link. The exact interface commands for every router are not provided in one complete, consistent configuration in the report, so full router configurations are not invented here.
+The report specifies subnet mask 255.255.255.252 (/30) and DCE clock rate 128000 for each serial link. The exact interface commands for every router are not provided in one complete configuration in the report, so full router configurations are not invented here.
 
-## Routing protocol — unresolved in the source
+## Routing protocol — RIP Version 2
 
-The source report is inconsistent:
+The group confirmed that the Packet Tracer network uses **RIP Version 2 (RIPv2)**. The assignment report refers to RIP and RIP v2 in different sections and also mentions static routing in one conclusion; the group's confirmation identifies RIPv2 as the method used in the Packet Tracer project.
 
-- Chapter 3.5.2 identifies RIP on all routers.
-- The Australia branch conclusion refers to RIP version 2.
-- Another branch conclusion mentions static routing.
-
-The source does not provide a complete set of routing commands for all four routers. Therefore this repository does not present a guessed RIP/RIPv2/static configuration as verified. Confirm the running configuration in Packet Tracer before adding final routing commands.
+The report does not provide a complete set of routing commands for all four routers, so this document identifies the protocol without inventing full router-specific command blocks.
 
 ## End-device addressing
 
-The report states that DHCP is not used for the documented branch endpoint address plans. PCs, laptops, servers and access-point management interfaces use static addresses from their branch subnets. See [IP Addressing](ip-addressing.md) for device-level values.
+The report states that DHCP is not used for the documented branch endpoint address plans. PCs, laptops, servers and access-point management interfaces use static addresses from their branch subnets. See [IP Addressing](ip-addressing.md) for device-level values and department gateways.
 
 ## Verification commands
 
@@ -110,7 +105,7 @@ show running-config
 show interface status
 ```
 
-These are suggested verification commands from the assignment; this document does not claim fresh output has been collected.
+These are useful inspection commands. The group reports that the network was tested collectively; detailed CLI output has not been included in this repository.
 
 ## Security
 
@@ -118,4 +113,4 @@ The source report contains router/switch passwords, FTP and IoT credentials, ema
 
 ## Source
 
-Based on the submitted assignment's Chapter 3.1–3.6 and Australia router/switch configuration examples.
+Based on the submitted assignment's Chapter 3.1–3.6 and Australia router/switch configuration examples, with the routing method clarified by the group's Packet Tracer confirmation.
