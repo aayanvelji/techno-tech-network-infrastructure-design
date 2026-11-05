@@ -1,37 +1,27 @@
 # Project Overview
 
-## Background
+Techno Tech is a proposed multinational organisation with branches in Malaysia (headquarters), Singapore, Australia and Japan. The assignment covers four extended-star branch LANs, a full-mesh WAN with six serial /30 point-to-point links, branch IP addressing, routers, switches, end devices, wireless access and network services.
 
-Techno Tech is a proposed enterprise network scenario with branch offices in Malaysia, Singapore, Australia and Japan. The university assignment develops a network design for these locations and documents how the branch networks are connected and supported by shared services.
+## Branch address spaces
 
-## Objectives
-
-- Design LAN layouts for the four branch locations.
-- Plan IP addressing for branch networks and devices.
-- Design WAN connectivity between the branches.
-- Configure routers, switches and end devices in Cisco Packet Tracer.
-- Configure the network services described in the assignment.
-- Document implementation decisions and verification.
-
-## Branch allocation
-
-The assignment report identifies the following division of work:
-
-| Contributor | Assigned branch / responsibility |
+| Branch | Address space |
 |---|---|
-| Mohammed Bilal Namoji | Malaysia branch design and documentation |
-| Mohammed Mujtaba Ahmed | Singapore branch, WAN documentation and configuration documentation |
-| Keyaan Minhas | Australia branch, WAN connection in Packet Tracer and configuration documentation |
-| Aayan Velji | Japan branch, centralized email server and account creation, and configuration documentation |
+| Malaysia | 10.10.x.x |
+| Singapore | 10.20.x.x |
+| Australia | 10.30.x.x |
+| Japan | 10.40.x.x |
 
-## Project classification
+The WAN uses 10.255.0.x. Chapter 3.5.2 identifies RIP as the routing protocol in the configuration section.
 
-This is a collaborative university group project. The branch responsibilities above are reproduced from the assignment's work breakdown structure. The repository distinguishes team-level outcomes from each contributor's assigned work.
+## Team responsibilities
 
-## Implementation platform
+- Mohammed Bilal Namoji: Malaysia branch, local DNS and web, configuration documentation.
+- Mohammed Mujtaba Ahmed: Singapore branch, local DNS, web and IoT, WAN and configuration documentation.
+- Keyaan Minhas: Australia branch, local DNS, FTP, web and IoT, WAN connection in Packet Tracer, configuration documentation.
+- Aayan Velji: Japan branch, local DNS, centralised email server for all branches, email configuration and account creation.
 
-Cisco Packet Tracer is the simulation platform identified for the network implementation. The native simulation file will be retained in `packet-tracer/` when the original file is added.
+The original Cisco Packet Tracer file is stored at `packet-tracer/FINAL_PRESENTATION.pkt`. This documentation is based on the assignment report, not an independent verification of every simulation setting or test result.
 
-## Source material
+## Source
 
-The original assignment report is the source for the project scope and work allocation. Detailed configuration and testing descriptions will be added after reviewing the complete simulation artefact.
+Submitted Networking Assignment, branch design chapters, WAN chapter, configuration chapter and task allocation table.
