@@ -1,17 +1,18 @@
-# Individual Contribution — Aayan Velji
+# Individual Contribution
 
-This repository contains a group university project. The assignment's work breakdown structure assigns the following responsibilities to Aayan Velji:
+This is a university group assignment. The source task allocation assigns Aayan Velji the following responsibilities:
 
-- Design of the Japan branch LAN.
-- Configuration of the centralized email server for the branches.
-- Creation of email accounts.
-- Related network configuration documentation.
+- Japan branch network design.
+- Local DNS service for the Japan branch.
+- Centralised email server for all branches.
+- Email-server configuration and account creation.
+- Network configuration documentation.
 - Individual project conclusion.
 
-These points describe the responsibilities recorded in the submitted assignment. They should not be interpreted as a claim that the entire multi-branch network was completed individually.
+The Japan branch uses the 10.40.x.x address range and an extended-star LAN design with Finance, IT, Administration and Human Resources departments. The assignment lists the DNS server at 10.40.4.15 and the central email server at 10.40.4.8, using the technotech.com domain.
 
-## Portfolio presentation
+The documented email procedure enables the service, creates accounts and describes sending and receiving a test message. Account passwords are excluded.
 
-When describing this project on a CV or LinkedIn profile, identify it as a **university group project** and describe the Japan branch and centralized email-server work as the individual contribution.
+These responsibilities describe the assigned individual work; they do not mean the entire four-branch network was completed individually. The project was completed collaboratively by the group.
 
-Specific configuration details and screenshots will be added after checking the Packet Tracer file.
+Source: Assignment task allocation table, Japan branch chapter, email configuration section and individual conclusion.
