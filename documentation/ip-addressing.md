@@ -2,6 +2,16 @@
 
 This document consolidates the branch, device and WAN addressing information recorded in the submitted assignment. Values are reproduced as written; the Packet Tracer file has not been independently inspected to validate every entry.
 
+> **Verification warning:** The report contains conflicting gateway and endpoint values. The summary below identifies the conflicts that should be checked in Packet Tracer before these addresses are treated as the final working configuration.
+
+| Branch / item | Values recorded in the report | Verification needed |
+|---|---|---|
+| Malaysia department gateways | Chapter 3.1 lists values including 10.10.1.110, 10.10.1.160, 10.10.1.60 and 10.10.1.10; device tables use 10.10.1.1. | Confirm the actual gateway configured for each department. |
+| Japan HR gateway | Chapter 3.1 gives 10.40.3.1; the Japan router interface table gives 10.40.2.1. | Confirm the HR router interface and endpoint gateways. |
+| Japan Administration switch gateway | Endpoint table prints 10.20.1.1; Japan router interface table gives 10.40.1.1. | Confirm the switch management default gateway. |
+| Japan HR endpoint | One HR endpoint is printed as 10.40.3.4 in the HR table. | Confirm the intended endpoint address and subnet. |
+
+
 ## Branch address spaces
 
 | Branch | Address space | Subnet mask used in the report |
