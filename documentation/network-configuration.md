@@ -2,6 +2,9 @@
 
 This document summarises configuration examples and the routing information stated in the assignment. Passwords and other secrets from the source report are intentionally omitted.
 
+**Configuration coverage:** The submitted report provides detailed command examples for the Australia router and Australia IT switch. It does not provide equivalent complete command sets for all routers and switches across the four branches. The examples below are therefore limited to the configurations explicitly documented in the report; commands for other branches have not been invented. The original Packet Tracer file has not been independently inspected to extract additional configurations.
+
+
 ## Router configuration example — Australia
 
 The report identifies the Australia router as TT-AU-R1 and lists these LAN interfaces:
