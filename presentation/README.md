@@ -1,5 +1,3 @@
 # Presentation
 
-Store the final project presentation here, preferably as a PDF for convenient viewing on GitHub.
-
-Only include presentation material that the group is permitted to share.
+This folder is reserved for the group's final project presentation material. Only add files that the group is permitted to share. Review presentation files for confidential information before uploading. The repository remains image-free.
