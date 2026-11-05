@@ -24,16 +24,14 @@ This is a collaborative university assignment:
 - **Mohammed Bilal Namoji:** Malaysia branch; local DNS and web; configuration documentation.
 - **Keyaan Minhas:** Australia branch; local DNS, FTP, web and IoT; WAN connection in Packet Tracer; configuration documentation.
 
-See [Individual Contribution](documentation/my-contribution.md) for Aayan's assigned responsibilities.
+See [Individual Contribution](documentation/my-contribution.md) for Aayan's assigned responsibilities. The work is presented as a group project, not as an individual build.
 
 ## Repository structure
 
 | Path | Contents |
 |---|---|
-| `documentation/` | Project overview, branch designs, WAN, addressing, configuration, services and contribution |
+| `documentation/` | Project overview, branch designs, WAN, device-level addressing, configuration, services, testing checklist and contribution |
 | `packet-tracer/FINAL_PRESENTATION.pkt` | Original Cisco Packet Tracer project file |
-| `reports/` | Guidance about the source university report |
-| `presentation/` | Guidance about presentation material |
 
 The repository is intentionally **image-free**. No screenshots or exported diagrams are included.
 
